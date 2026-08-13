@@ -6,9 +6,10 @@ const int DisplayWidth = 320;
 const int DisplayHeight = 172;
 
 // Wifi Details
-const char WiFiSSID[] = "GetOffMyWiFi";
+const char WiFiSSID[] = "";
 const char WiFiPassword[] = ""; // Add Password When Testing
-const
+
+
 
 void setup() {
   // init code
