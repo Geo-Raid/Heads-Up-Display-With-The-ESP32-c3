@@ -28,9 +28,9 @@ class Program
 
     static void Main() {
         var handle = GetConsoleWindow();
-        ShowWindow(handle, 0);
+        ShowWindow(handle, 5);
 
-        string EndPointIP = "192.168.1.228"; // Sets the IP of the ESP32 (Set this to the IP of the ESP32)
+        string EndPointIP = "192.168.1.237"; // Sets the IP of the ESP32 (Set this to the IP of the ESP32)
 
         UdpClient Client = new UdpClient(); // Starts the UDP Server
 
@@ -39,6 +39,8 @@ class Program
         ImageBytes = RemoveHeaderAndAlphaBytes(ImageBytes);
         ImageBytes = ConvertTo8BitColor(ImageBytes);
         ImageBytes = RLE(ImageBytes);
+
+        Console.WriteLine(ImageBytes.Count);
 
         File.WriteAllBytes(exeDir + "/test.bin", ImageBytes.ToArray());
 
@@ -60,11 +62,22 @@ class Program
         }
     }
 
-   static  void SendFrame(List<byte> FrameData, UdpClient Client, string IP, int Port)
+    static void SendFrame(List<byte> FrameData, UdpClient Client, string IP, int Port)
     {
         const int chunkSize = 1024; // Number of bytes in a package
         int Total = FrameData.Count;
         int Offset = 0; // Offset of the pointer in the image data
+
+        // Sends the Length of the entire Image before sending the image data
+        ushort LengthOfImage = (ushort)FrameData.Count();
+        byte[] LengthHeader = new byte[3];
+        LengthHeader[0] = (byte)(LengthOfImage >> 8); // High Byte of the Length
+        LengthHeader[1] = (byte)(LengthOfImage & 0xFF); // Low Byte of the Length
+        LengthHeader[2] = (byte)(Math.Min(chunkSize, Total - Offset)); // How many packets are going to be sent
+        Client.Send(LengthHeader, 3, IP, Port);
+
+        Console.WriteLine(LengthHeader[0].ToString("X2") + LengthHeader[1].ToString("X2"));
+
 
         while (Offset < Total)
         {
@@ -115,7 +128,7 @@ class Program
             FinalColor[1] = (byte)Math.Round((decimal)(8 * ColorPercentage[1])); // 8-Bit Green
             FinalColor[2] = (byte)Math.Round((decimal)(8 * ColorPercentage[2])); // 8-Bit Red
 
-            // Stitches all the Colors together into 1 Byte
+            // Stitches all the Colors together into 1 Byte (R3 G3 B2)
             ConvertedImage.Add((byte)(FinalColor[2] << 5 | FinalColor[1] << 2 | FinalColor[0]));
         }
         return ConvertedImage;
@@ -132,7 +145,7 @@ class Program
 
         while (Offset < ImageBytes.Count - 1)
         {
-            if (Pointer == ImageBytes[Offset + 1]) // Runs if the Next Byte is the same as the last
+            if (Pointer == ImageBytes[Offset + 1] && Offset != ImageBytes.Count() - 1) // Runs if the Next Byte is the same as the last
             {
                 Count++;
             } else // Runs if the Next Byte is Not the same as the last
@@ -145,6 +158,10 @@ class Program
                 Pointer = ImageBytes[Offset]; // Sets the Pointer to the Next Byte in the Sequence
             }
             Offset++;
+        }
+
+        if  (CompressedImage.Count > ImageBytes.Count){ // If the Compressed Image is bigger than the Original just send the Original Image
+            CompressedImage = ImageBytes; // Sets the Return value to the Orininal Image
         }
 
         return CompressedImage;

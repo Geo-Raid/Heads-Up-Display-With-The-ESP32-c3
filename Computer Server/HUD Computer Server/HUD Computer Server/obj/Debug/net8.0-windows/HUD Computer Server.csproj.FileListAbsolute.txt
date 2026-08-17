@@ -12,10 +12,3 @@ C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Com
 C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\obj\Debug\net8.0-windows\HUD Computer Server.pdb
 C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\obj\Debug\net8.0-windows\HUD Computer Server.genruntimeconfig.cache
 C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\obj\Debug\net8.0-windows\ref\HUD Computer Server.dll
-C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\obj\Debug\net8.0-windows\HUD Computer Server.csproj.AssemblyReference.cache
-C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
-C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\bin\Debug\net8.0-windows\SixLabors.ImageSharp.dll
-C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\bin\Debug\net8.0-windows\SixLabors.ImageSharp.Drawing.dll
-C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\bin\Debug\net8.0-windows\SixLabors.PolygonClipper.dll
-C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\bin\Debug\net8.0-windows\System.IO.Hashing.dll
-C:\Work\Projects\Heads_Up_Display_V1\Computer Server\HUD Computer Server\HUD Computer Server\obj\Debug\net8.0-windows\HUD Comp.0DF5D7AF.Up2Date

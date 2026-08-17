@@ -1,14 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mOK31+a7yNg=",
+  "dgSpecHash": "uFg6Frm4Q0M=",
   "success": true,
-  "projectFilePath": "C:\\Work\\Projects\\Heads_Up_Display_V1\\Git Releases\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Geo\\.nuget\\packages\\sixlabors.fonts\\3.1.0\\sixlabors.fonts.3.1.0.nupkg.sha512",
-    "C:\\Users\\Geo\\.nuget\\packages\\sixlabors.imagesharp\\4.1.0\\sixlabors.imagesharp.4.1.0.nupkg.sha512",
-    "C:\\Users\\Geo\\.nuget\\packages\\sixlabors.imagesharp.drawing\\3.1.0\\sixlabors.imagesharp.drawing.3.1.0.nupkg.sha512",
-    "C:\\Users\\Geo\\.nuget\\packages\\sixlabors.polygonclipper\\1.0.1\\sixlabors.polygonclipper.1.0.1.nupkg.sha512",
-    "C:\\Users\\Geo\\.nuget\\packages\\system.io.hashing\\8.0.0\\system.io.hashing.8.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Work\\Projects\\Heads_Up_Display_V1\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

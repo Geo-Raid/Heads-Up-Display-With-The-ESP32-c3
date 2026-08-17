@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\Projects\\Heads_Up_Display_V1\\Git Releases\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj": {}
+    "C:\\Work\\Projects\\Heads_Up_Display_V1\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj": {}
   },
   "projects": {
-    "C:\\Work\\Projects\\Heads_Up_Display_V1\\Git Releases\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj": {
+    "C:\\Work\\Projects\\Heads_Up_Display_V1\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\Projects\\Heads_Up_Display_V1\\Git Releases\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj",
+        "projectUniqueName": "C:\\Work\\Projects\\Heads_Up_Display_V1\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj",
         "projectName": "HUD Computer Server",
-        "projectPath": "C:\\Work\\Projects\\Heads_Up_Display_V1\\Git Releases\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj",
+        "projectPath": "C:\\Work\\Projects\\Heads_Up_Display_V1\\Computer Server\\HUD Computer Server\\HUD Computer Server\\HUD Computer Server.csproj",
         "packagesPath": "C:\\Users\\Geo\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\Projects\\Heads_Up_Display_V1\\Git Releases\\Computer Server\\HUD Computer Server\\HUD Computer Server\\obj\\",
+        "outputPath": "C:\\Work\\Projects\\Heads_Up_Display_V1\\Computer Server\\HUD Computer Server\\HUD Computer Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Geo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,16 +45,6 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "dependencies": {
-            "SixLabors.ImageSharp": {
-              "target": "Package",
-              "version": "[4.1.0, )"
-            },
-            "SixLabors.ImageSharp.Drawing": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
